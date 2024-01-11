@@ -81,6 +81,7 @@ class MultiRepoManager:
             results = self.__exec_in_directories(['/bin/bash', str(script_file)])
             for r in results:
                 print(r.stdout.decode())
+                print(r.stderr.decode())
         else:
             print(f"Action unknown: {action}", file=stderr)
             exit(1)
